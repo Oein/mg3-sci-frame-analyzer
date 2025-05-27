@@ -122,7 +122,9 @@ input {
 }
 
 #cnv {
-  width: 100%;
+  max-width: 100%;
+  max-height: 80dvh;
+  overflow: hidden;
 }
 
 .row > button {
@@ -130,10 +132,18 @@ input {
   padding: 4px 12px;
 }
 
-@media (min-width: 600px) {
+#rst {
+  overflow: hidden;
+}
+
+@media (min-width: 650px) {
   #rst {
     display: flex;
     gap: 0.5rem;
     flex-direction: row;
   }
+}
+#ctrl {
+  min-width: min-content;
+  flex-grow: 1;
 }
