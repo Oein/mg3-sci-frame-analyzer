@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://blog.oein.kr/favicon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오인오인 프레임 분석기</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+  </head>
+  <body>
+    <h1 class="tt">오인오인 프레임 분석기</h1>
+    <div id="app">
+      <div class="card">
+        <div class="hf">샘플 영상 다운로드</div>
+        <div class="row">
+          <a href="/Freefall(100).mp4" download="Freefall(100).mp4">
+            속도 100
+          </a>
+          <a href="/Freefall(200).mp4" download="Freefall(200).mp4">
+            속도 200
+          </a>
+          <a href="/Freefall(400).mp4" download="Freefall(400).mp4">
+            속도 400
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <div class="hf">영상 파일 선택</div>
+          <input type="file" id="file" accept="video/*" />
+        </div>
+
+        <div class="row">
+          <div class="hf">Cut miliseconds</div>
+          <input type="number" id="cut" value="100" />
+        </div>
+
+        <button id="anal">프레임 추출 시작</button>
+      </div>
+
+      <div class="card" id="rst">
+        <canvas id="cnv"></canvas>
+        <div>
+          <div class="row">
+            <div class="hf" style="min-width: max-content">랜더 방식</div>
+            <select id="render">
+              <optgroup label="RGB Differ">
+                <option>RGB Differ (임계값 10)</option>
+                <option>RGB Differ (임계값 20)</option>
+                <option>RGB Differ (임계값 30)</option>
+                <option>RGB Differ (임계값 40)</option>
+                <option>RGB Differ (임계값 50)</option>
+              </optgroup>
+              <optgroup label="Others">
+                <option>Opacity</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="row">
+            <div class="hf" style="min-width: max-content">시작 프레임</div>
+            <input type="number" id="sf" value="0" />
+            <button id="sfp">-</button>
+            <button id="sfm">+</button>
+          </div>
+          <div class="row">
+            <div class="hf" style="min-width: max-content">끝 프레임</div>
+            <input type="number" id="ed" value="0" />
+            <button id="edp">-</button>
+            <button id="edm">+</button>
+          </div>
+          <button id="rerender">다시 생성</button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          본 프로그램의 저작권은 <a href="https://blog.oein.kr">Oein</a> 에게
+          있습니다. 이 프로그램은 MIT 라이선스 하에 배포됩니다.
+          <a href="https://github.com/Oein/mg3-sci-frame-analyzer">Github</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+@import "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css";
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --Font-base: Pretendard Variable, Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI,
+    Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, sans-serif;
+}
+
+body {
+  font-family: var(--Font-base);
+}
+
+normal {
+  font-weight: 400;
+}
+
+.thin {
+  font-weight: lighter;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  line-height: 1;
+}
+
+.hf {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+
+  min-width: max-content;
+}
+
+input,
+select {
+  margin: 0px !important;
+}
+
+#app {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.tt {
+  padding: 0.5rem;
+  margin: 0px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #00000050;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
+}
+
+.card {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 5px;
+  border: 1px solid #00000050;
+  margin-bottom: 0.75rem;
+}
+
+input {
+  width: 100%;
+  overflow: hidden;
+}
+
+#cnv {
+  width: 100%;
+}
+
+.row > button {
+  margin: 2px 0px;
+  padding: 4px 12px;
+}
+
+@media (min-width: 600px) {
+  #rst {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+  }
+}
